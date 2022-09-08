@@ -7,20 +7,26 @@
 
 .test{font-family: "priceDown";}
 
-.footer{text-align: center}
+.foot{width:100%;background-color: grey;position: fixed;bottom: 0;text-align: center}
 
-  
+.wish{font-family: "priceDown";text-align: center;border: solid black 1px;border-color: grey}
+.h-wish{font-family: "priceDown";text-align: center}
+
+.title-wish{font-size: 30px;text-decoration: underline;color: black}
+
 .nav-horizontal {
+    font-family: "priceDown";
     background-color: #fff;
     overflow: hidden;
     height: 3em;
     width: 100%;
+    font-size: 20px;
+    text-align: center;
   }
 .mask {
     height: 5em;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
     
 .list{
@@ -50,4 +56,7 @@ li{
 
 *{box-sizing: border-box;}
   
-body{font-family:sans-serif;padding-top: 0;width:100vw;}
+body{padding-top: 0;width:99vw;}
+
+
+/* BUTTON */

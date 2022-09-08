@@ -6,7 +6,7 @@
 
 
 {# <link href="{{ asset('css/app.css') }}" rel="icon" /> #}
-<link href="{{ asset('icons/symfony-icon.webp') }}" rel="icon" />
+<link href="{{ asset('icons/favicon.png') }}" rel="icon" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -19,10 +19,9 @@
 
     {% block body %}{% endblock %}
 
-    <div>
-        <a class="footer">©Bucket-List - {{"now"|date('Y')}}</a>
-    </div>
-
+    <footer>
+        <div class="foot">©Bucket-List - {{"now"|date('Y')}}</div>
+    </footer>
 </body>
 
 </html>

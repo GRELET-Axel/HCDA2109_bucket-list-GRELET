@@ -1,1 +1,18 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 class="h-wish">Wish List</h1>
+
+    {% for w in wish_list %}
+    <div class="wish">
+        <a class="title-wish" href="{{path('wish_detail', {id : w.id})}}">Wish n°{{w.id}}</a>
+        <p>Title : <a>{{w.title}}<a></p>
+        <p>Description : {{w.description}}</p>
+        <p>Author : <a>{{w.author}}<a></p>
+        <p>Published : <a>{{w.isPublished == 1?'yes':'no'}}<a></p>
+        <p>Created : <a>{{w.dateCreated|date('d/m/Y h:m')}}<a></p>
+    </div>
+    {% endfor %}
+
+{% endblock %}
