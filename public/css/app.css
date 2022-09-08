@@ -13,7 +13,7 @@
 .h-wish{font-family: "priceDown";text-align: center}
 
 .title-wish{font-size: 30px;text-decoration: underline;color: black}
-
+.logo{padding-right: 3rem}
 .nav-horizontal {
     font-family: "priceDown";
     background-color: #fff;
@@ -30,6 +30,7 @@
 }
     
 .list{
+    vertical-align: baseline;
     display: inline-table;
     margin: 0 auto;
     max-width: 100%;
