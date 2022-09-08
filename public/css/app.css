@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "priceDown";
+    src: url("fonts/pricedown.otf") format("otf"),
+   }
+   
+/* body{background-color: white} */
+
+.test{font-family: "priceDown";}
+
+.footer{text-align: center}
+
+  
+.nav-horizontal {
+    background-color: #fff;
+    overflow: hidden;
+    height: 3em;
+    width: 100%;
+  }
+.mask {
+    height: 5em;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    
+.list{
+    display: inline-table;
+    margin: 0 auto;
+    max-width: 100%;
+}
+li{
+    display: table-cell;
+}
+  
+.link{
+    display: block;
+    padding: 0 1em;
+    text-decoration: none;
+    color: #333;
+    height: 3em;
+    line-height: 3;
+}
+  
+.link:hover {
+    border-bottom: 2px solid black;
+    background-color: #f9f9f9;
+}
+  
+/* codepen用 reset */
+
+*{box-sizing: border-box;}
+  
+body{font-family:sans-serif;padding-top: 0;width:100vw;}
