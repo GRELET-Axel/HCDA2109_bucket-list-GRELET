@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\WishRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: WishRepository::class)]
 class Wish
@@ -21,6 +22,11 @@ class Wish
     private ?string $description = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\Regex(
+        pattern: '/\d/',
+        match: false,
+        message: 'Error : Value {{ value }} contain number !',
+    )]
     private ?string $author = null;
 
     #[ORM\Column]

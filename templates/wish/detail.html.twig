@@ -2,8 +2,14 @@
 
 
 {% block body %}
+    
+    {% for message in app.flashes('success') %}
+        <div class="message-valid">
+            {{ message }}
+        </div>
+    {% endfor %}
 
-    <h1 class="h-wish">Wish n°{{wish.id}}</h1>
+    <h2 class="h-wish">Wish n°{{wish.id}}</h2>
 
     <div class="wish">
         <p>Title : <a>{{wish.title}}<a></p>

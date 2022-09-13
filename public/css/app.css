@@ -61,3 +61,15 @@ body{padding-top: 0;width:99vw;}
 
 
 /* BUTTON */
+
+
+/* message */
+
+.message-valid{font-family: "priceDown";color: #4b7240;text-align: center;font-size: 30px;text-decoration: underline;}
+
+/* FORM */
+
+#wish_form{font-family: "priceDown";text-align: center;}
+#wish_form label{font-size: 20px;margin-right: 3rem}
+#wish_form div{margin-top: 1.5rem}
+#wish_form_save{border: solid black 1px;background-color: transparent;width: 200px;font-size: 15px;cursor: pointer;margin-top: 2rem}
