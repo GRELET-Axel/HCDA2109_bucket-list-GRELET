@@ -17,6 +17,9 @@
         <p>Author : <a>{{wish.author}}<a></p>
         <p>Published : <a>{{wish.isPublished == 1?'yes':'no'}}<a></p>
         <p>Created : <a>{{wish.dateCreated|date('d/m/Y h:m')}}<a></p>
+        {% if wish.category.name is defined %}
+        <p>Category : <a>{{wish.category.name}}<a></p>
+        {% endif %}
     </div>
 
 {% endblock %}

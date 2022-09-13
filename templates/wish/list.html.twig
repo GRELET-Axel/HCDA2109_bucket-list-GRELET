@@ -4,7 +4,7 @@
 
     <h1 class="h-wish">Wish List</h1>
 
-    {% for w in wish_list %}
+    {# {% for w in wish_list %}
     <div class="wish">
         <a class="title-wish" href="{{path('wish_detail', {id : w.id})}}">Wish n°{{w.id}}</a>
         <p>Title : <a>{{w.title}}<a></p>
@@ -12,7 +12,33 @@
         <p>Author : <a>{{w.author}}<a></p>
         <p>Published : <a>{{w.isPublished == 1?'yes':'no'}}<a></p>
         <p>Created : <a>{{w.dateCreated|date('d/m/Y h:m')}}<a></p>
+        {% if w.category.name is defined %}
+            <p>Category : <a>{{w.category.name}}<a></p>    
+        {% endif %}
     </div>
-    {% endfor %}
-
+    {% endfor %} #}
+    <table id="wish-list">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Published</th>
+        <th>Created</th>
+        <th>Category</th>
+      </tr>
+        {% for w in wish_list %}
+            <tr>
+                <td>{{w.title}}</td>
+                <td>{{w.description}}</td>
+                <td>{{w.author}}</td>
+                <td>{{w.isPublished == 1?'yes':'no'}}</td>
+                <td>{{w.dateCreated|date('d/m/Y h:m')}}</td>
+                {% if w.category.name is defined %}
+                    <td>{{w.category.name}}</td>
+                {% else %}
+                    <td>no</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
