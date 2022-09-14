@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Wish;
 use App\Form\WishFormType;
+use App\Util\Censurator;
 use DateTime;
 use DateTimeInterface;
 use Doctrine\ORM\EntityManager;
@@ -44,7 +45,7 @@ class WishController extends AbstractController
     }
 
     #[Route('/create/list', name: 'create')]
-    public function create(Request $request,EntityManagerInterface $em, ValidatorInterface $validator): Response
+    public function create(Request $request,EntityManagerInterface $em, ValidatorInterface $validator, Censurator $censurator): Response
     {
         $wish = new Wish();
 
@@ -69,7 +70,7 @@ class WishController extends AbstractController
                 }else{
 
                     $wish->setTitle($dataForm->getTitle());
-                    $wish->setDescription($dataForm->getDescription());
+                    $wish->setDescription($censurator->purify($dataForm->getDescription()));
                     $wish->setAuthor($dataForm->getAuthor());
                     $wish->setIsPublished(false);
                     $wish->setDateCreated(new DateTime());

@@ -9,9 +9,11 @@
 
 .foot{width:100%;background-color: grey;position: fixed;bottom: 0;text-align: center}
 
+/* table */
 #wish-list{width: 100%;font-size: 20px;font-family: "priceDown";text-align: center;border: solid black 1px;border-color: grey}
 #wish-list th{font-size: 25px;}
 #wish-list td{border-top: solid 1px black;border-right: solid 1px black;}
+
 .h-wish{font-family: "priceDown";text-align: center}
 
 .title-wish{font-size: 30px;text-decoration: underline;color: black}
