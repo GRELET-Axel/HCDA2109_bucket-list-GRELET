@@ -75,3 +75,8 @@ body{padding-top: 0;width:99vw;}
 #wish_form label{font-size: 20px;margin-right: 3rem}
 #wish_form div{margin-top: 1.5rem}
 #wish_form_save{border: solid black 1px;background-color: transparent;width: 200px;font-size: 15px;cursor: pointer;margin-top: 2rem}
+
+.form{font-family: "priceDown";text-align: center;}
+.form label{font-size: 20px;margin-right: 3rem;margin-left: 2rem}
+.form div{margin-top: 1.5rem}
+.form .btn{border: solid black 1px;background-color: transparent;width: 200px;font-size: 15px;cursor: pointer;margin-top: 2rem}
